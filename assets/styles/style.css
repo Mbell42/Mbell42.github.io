@@ -1,0 +1,81 @@
+/* Universal styles */   
+    /* jumbotron styles */
+.container-fluid {
+    height: 160px;
+}
+
+.navbar-header {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:none;
+    width: fill;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #777777;
+}
+
+.nav-pills {
+    margin-top: auto;
+    margin-bottom: none;
+}
+
+.nav-link {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #777777;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+
+/* bg styles */
+.bg {
+    width: fit-content;
+    height: fit-content;
+    min-height: calc(100vh - 58px); 
+    background-image: url("../images/vintage-wallpaper.png");
+}
+
+
+
+/* page specific styles */
+    /* Contact page form styles */
+.submitForm {
+    margin-top: 15px;
+    
+    margin-right: auto;
+}
+.input-group {
+    width: 600px;
+}
+.formButton {
+    margin-left: 10px;
+}
+.basic-addon1 {
+    width: 100px;
+}
+#formMessage {
+    height: 100px;
+}
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
