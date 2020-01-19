@@ -1,0 +1,10 @@
+/* add padding to mainPanel area */
+#mainPanel {
+    padding: 20px;
+}
+
+/* make textarea have dashed border */
+#passwordDisplay {
+    border: dashed;
+    border-width: 2px;
+}

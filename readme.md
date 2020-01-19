@@ -42,3 +42,5 @@ Progress:
 2020.01.18.1906 - For logic.js, I commented out everything, as I was having trouble getting a button to respond to a click, so i migrated the code to the index.html file to cut down  potential issues.  Had trouble getting jquery to work.
 
 2020.01.18.1956 - For index.html, using javaScript I attempted to add an event listener to the 'Generate a Password' button.  I then attempted to create a random alphanumeric generator that will create a random 9 character long password.
+
+2020.01.18.2342 - For index.html, style.css, and logic.js; I reattached the link to external logic sheet and migrated latest javascript code bac over to logic.js.  Updated local variable newPW to be global variable and applied minor fixes to code structure. Added check to beginning of logic.js to ensure that it is inked properly a console log. Added styles to mainPanel and textarea sections of page in style.css.
