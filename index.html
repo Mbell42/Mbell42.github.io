@@ -1,194 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
     <!-- Meta tag from Bootstrap CSS that allows for proper rendering and touch-zooming responsive viewport function. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- Link to Boostrap CSS CDN -->
-    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity = "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- Link to external styles sheet -->
-    <link rel = "stylesheet" type = "text/css" href = "./assets/styles/style.css">
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity = "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Link to the external styles sheet -->
+    <link rel = "stylesheet" type = "text/css" href = "assets/styles/style.css">
     
     <!-- Added link to the jQuery library -->
     <script src = "https://code.jquery.com/jquery-3.4.1.min.js" integrity = "sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin = "anonymous"></script>
     <!-- Link to external logic sheet -->
     <script src = "./assets/logic/logic.js"></script>
-      
-      <title>Password Generator</title>
 
-  </head>
-  <body class = "bg-light">
-    
-    <!-- container wrapper for main body elements -->
-    <main class = "container w-100">
-      <!-- page header centered above the foreground content containing main page title -->
-      <div class = "row">
-        <div class = "col-md-12">
-          <header class = "page-header">
-            <!-- main page title -->
-            <h1 class = "hdr text-muted text-center">Password Generator</h1>
-          </header>
-        </div>
-      </div>
-
-      <!-- foreground elements for page, including subtitle and text-area containing two buttons -->
-      <!-- '**'' the panel and child elements will be in a middle column with a small column on each side -->
-      <!-- '***' the first two child rows of the panel element will each follow a similar column pattern to the direct previous comment -->
-      <!-- '*4' the third child row of the panel element containing the buttons will be in the following column pattern, where the '4' columns are the buttons; '2-3-2-3-2' -->
-      <div class = "row">
-        <!-- small far left side column mentioned in ** comment -->
-        <div class = "col-md-1"></div>
-        <!-- middle column mentioned in ** comment -->
-        <div class = "col-md-10">
-          
-          <div class = "panel bg-white" id = "mainPanel">  
-            <!-- row containing subtitle for panel child elements -->
-            <div class = "row">
-              <!-- small left side column mentioned in *** comment -->
-              <div class = "col-md-1"></div>
-              <!-- middle column mentioned in *** comment -->
-              <div class = "col-md-10">
-                <!-- subtitle -->   
-                <h2 class = "hdr text-muted">Generate a Password</h2>
-                <hr>
-                <!-- text area containing two buttons -->
-              </div>
-              <!-- small right side column mentioned in *** comment -->
-              <div class = "col-md-1"></div>
+    <title>Code Quiz</title>
+</head>
+<body>
+    <!-- container for body of page -->
+    <main class = "container w-100
+        screen-main
+        screen-question-01
+        screen-question-02
+        screen-question-03
+        screen-question-04
+        screen-question-05
+        screen-question-06
+        screen-question-07
+        screen-question-08
+        screen-question-09
+        screen-question-10
+        screen-gameOver
+        screen-highScores" >
+        
+        <!--1) the first row of the page contains a button that takes the user to the Highscores page in the 
+            left column, empty space in the middle column, and a countdown timer in the right column -->
+        <div class = "row" id = "rw1">
+            <!-- upper left column containing button that takes user to HighScores -->
+            <div class = "col-md-3 text-center viewHS-container" id = "top-left">
+                <button type = "button" class = "btn btn-lg" id = "highScore-btn">HighScores</button>
             </div>
-            <div class = "row">
-              <!-- small left side column mentioned in *** comment -->
-              <div class = "col-md-1"></div>
-              <!-- middle column mentioned in *** comment -->
-              <div class = "col-md-10">
-                <textarea readonly class = "rounded w-100" id = "passwordDisplay" placeholder = "Your Secure Password" aria-label = "Generated Password"></textarea>
-                <hr>
-              </div>
-              <!-- small right side column mentioned in *** comment -->
-              <div class = "col-md-1"></div>
+            <!-- empty space column -->
+            <div class = "col-md-6 empty">
             </div>
-            <div class = "row buttons">
-                <!-- small left side column mentioned in *4 comment -->
-                <div class = "col-md-2"></div>
-                
-                <!-- first button column mentioned in *4 comment -->
-                <div class = "col-md-3">
-                  <!-- button that generates a random password when clicked, and prints the password into the above text-area -->
-                  <button type = "button" class = "btn btn-lg btn-danger" id = "generate" value = "inactive">Generate Password</button>
-                </div>
-                
-                <!-- small middle column, inbetween the button columns, mentioned in *4 comment -->
-                <div class = "col-md-2"></div>
-                
-                <!-- second button column mentioned in *4 comment -->
-                <div class = "col-md-3">
-                  <!-- bonus; button that copies password that is currently displayed in the above text-area to the user's clipboard -->
-                  <!-- this button will be greyed out when no password is displayed in the above text-area -->
-                  <button type = "button" class = " btn btn-lg btn-secondary" id = "copy" value = "inactive" disabled>Copy to Clipboard</button>
-                </div>
-                
-                <!-- small right side column mentioned in *4 comment -->
-                <div class = "col-md-2"></div> 
+            <!-- upper right column containing countdown timer -->
+            <div class = "col-md-3 text-center timeLeft-container" id = "top-right">
+                <p id = "countdown">Time: </p>
             </div>
-          </div>
         </div>
 
-        <!-- small far right side column mentioned in ** comment -->
-        <div class = "col-md-1"></div>
-      </div>
+        <!--2) the second row of the page contains an h1 element in the middle column for the following:
+            (headers, questions, allDone, and yourHighScore. The side columns contain empty space -->
+        <div class = "row" id = "rw2">
+            <!-- empty space column -->
+            <div class = "col-md-3 empty">
+            </div>
+            <!-- upper central column initially containing title -->
+            <div class = "col-md-6 text-center" id = "central-top">
+                <h1 id = "title">Code Quiz</h1>
+            </div>
+            <!-- empty space column -->
+            <div class = "col-md-3 empty">
+            </div>
+        </div>
+
+        <!--3) the third row of the page contains the following elements in the middle column: a textarea for
+            the game description and yourHighScore, an unordered list with four list items for questions, an
+            unordered list with three list items for HighScores. The side columns contain empty space -->
+        <div class = "row" id = "rw3">
+            <!-- empty space column -->
+            <div class = "col-md-3 empty">
+            </div>
+            <!-- upper-mid central column initially containing the quiz description  -->
+            <div class = "col-md-6 text-center" id = "central-upper">
+                <p id = "description-text">Click the Start button to begin a ten-question code quiz!  Read each question
+                    carefully, and choose one of the answers provided. When the quiz is finished, your score will be
+                    displayed, and you will have an opportunity to enter your initials.  You will then be taken to
+                    High Scores, where you can compare your high score among the top three scores.
+                </p>
+            </div>
+            <!-- empty space column -->
+            <div class = "col-md-3 empty">
+            </div>
+        </div>
+
+        <!--4) the fourth row of the page contains the following elements in the middle column: a start button, a form 
+            for the user to input their initials, and two buttons for 'Go Back' and 'Clear HighScores'. The side columns
+            contain empty space -->
+        <div class = "row" id = "rw4">
+            <!-- empty space column -->
+            <div class = "col-md-3 empty">
+            </div>
+            <!-- lower-mid central column initially containing button to start quiz -->
+            <div class = "col-md-6 text-center" id = "central-lower">
+                <button type = "button" class = "btn btn-lg" id = "startQuiz-btn" name = "start-button">Start Quiz</button>
+            </div>
+            <!-- empty space column -->
+            <div class = "col-md-3 empty">
+            </div>
+        </div>
+
+        <!--5) the fifth row of the page contains the following elements in the middle column: a textarea for correct/incorrect
+            callouts, and a submit button for submitting the initials input form. The side columns contain empty space -->
+        <div class = "row" id = "rw5">
+            <!-- empty space column -->
+            <div class = "col-md-3 empty">
+            </div>
+            <!-- bottom-mid central column initially empty -->
+            <div class = "col-md-6 text-center" id = "central-bottom">
+            </div>
+            <!-- empty space column -->
+            <div class = "col-md-3 empty">
+            </div>
+        </div>
     </main>
     
-    <!-- <script>
-    <script>
-    //VARIABLES
-      //text-area
-      var passwordDisplay = document.getElementById("#passwordDisplay");
-      var pwCopy = "";
 
-      //buttons
-      var btnGen = document.getElementById("#generate");
-      var btnCopy = document.getElementById("#copy");
 
-      //array
-      var alphaNumArray = "";
-
-      var buttonArea = document.querySelector(".buttons");
-
-//FUNCTIONS
-  //once document is ready, 
-    // unable to get jquery to work - $(document).ready(function() {
-
-        
-        //adding clickable area to search for user clicks on buttons
-        buttonArea.addEventListener("click", function(event) {
-          var element = event.target;
-
-        //when user clicks the "Generate a Password" button,
-            // unable to get jquery to work -  $(btnGen).on("click", function() {
-            // unable to get jquery to work -      alert("I've been clicked!");
-            // unable to get jquery to work -    });
-          
-            // unable to get jquery to work -  }); 
-              
-            if (element.matches(btnGen)) {
-            var genState = element.getAttribute("value");
-            console.log(genState);
-
-            if (genState === "inactive") {
-              generatePassword();
-              element.setAttribute("value","active");
-              console.log(genState);
-            };
-          };
-        });
-          //a random password is generated, consisting of 9 upper and lower case alphanumeric characters
-            //to create the random password, 9 random upper and lower case alphanumeric charaters are generated
-              //I researched methods of this on stackOverflow.  This random password generator function is based and repurposed from a solution at "https://stackoverflow.com/questions/1497481/javascript-password-generator"              
-              function generatePassword() {
-                var length = 9;
-                var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-                var newPW = "";
-                //9 random upper and lower case alphanumeric charaters are generated and put into a variable "newPW"
-                //the contents of newPW are then appended together into a string
-                for (var i = 0, l = charset.length; i < length; ++i) {
-                  newPW += charset.charAt(Math.floor(Math.random() *l));
-                };
-                //the appended string is displayed in the text area
-                passwordDisplay.innerHTML(newPW);
-                //return - end of function
-                return;
-              };
-   
-
-        // //when user clicks the "Copy to Clipboard" button,
-        // if (element.matches(btnGen)) {
-        //     var copyState = element.getAttribute("value");
-        //     console.log(copyState);
-        //     //IF there IS a password currently displayed in the text-area
-        //     if (passwordDisplay !== "") {
-        //     //the "Copy to Keyboard" button is no longer greyed out, and is enaled
-        //     var copyState = element.setAttribute("disabled", "enabled");
-        //     element.setAttribute("value","active");
-        //     console.log(copyState);
-        //       //ELSE (NO password currently displayed in the text-area)
-        //       //the "Copy to Keyboard" button is still greyed out and disabled
-        //       else {
-        //         return;
-        //       };
-        //     };
-        //   };
-
-        //    //   that string is copied to the users keyboard
-            
-        //    // the variable containing the string is then set to null
-            
-        //   // return  
-    </script> 
-    </script> -->
-  </body>
+    
+</body>
 </html>
