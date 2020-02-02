@@ -1,126 +1,239 @@
 <!DOCTYPE html>
-<html lang = "en">
-<head>
-    <meta charset = "UTF-8">
-    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-    <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
-    <!-- Meta tag from Bootstrap CSS that allows for proper rendering and touch-zooming responsive viewport function. -->
-    <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!-- Link to Boostrap CSS CDN -->
-    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity = "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Link to the external styles sheet -->
-    <link rel = "stylesheet" type = "text/css" href = "assets/styles/style.css">
-    
-    <!-- Added link to the jQuery library -->
-    <script src = "https://code.jquery.com/jquery-3.4.1.min.js" integrity = "sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin = "anonymous"></script>
-    <!-- Link to external logic sheet -->
-    <script src = "./assets/logic/logic.js"></script>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
 
-    <title>Code Quiz</title>
-</head>
-<body>
-    <!-- container for body of page -->
-    <main class = "container w-100
-        screen-main
-        screen-question-01
-        screen-question-02
-        screen-question-03
-        screen-question-04
-        screen-question-05
-        screen-question-06
-        screen-question-07
-        screen-question-08
-        screen-question-09
-        screen-question-10
-        screen-gameOver
-        screen-highScores" >
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container">
+      <!-- Timeblocks go here -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script>
+      // Wait until Dom has completed loading
+      $(document).ready(function() {
+        // Console log that document is loaded and ready
+        console.log("document is loaded and ready");
+
+      // Testing moment.js is working properly, and testing how to use properly
+      // Console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
+      //log current time and date at top of log
+      console.log(moment().format('dddd') + moment().format("MMM Do"));   
+      console.log(moment().calendar());  
+      // console.log(moment().startOf('hour').fromNow());
+      // console.log(moment().endOf('hour').fromNow());
+      // console.log(parseInt(moment().startOf('hour').fromNow()));
+      console.log(moment().format());
+      // currentTime = moment().format();
+      // console.log(nextHour);
+      // console.log(parseInt(nextHour));
+      
+
+
+      // Linking element with id 'currentDay' with moment.js' updated current date
+      let currentDay = $("#currentDay");
+      // Make variable for desired moment.js data
+      let currentDate = moment().format('dddd') + " " + moment().format("MMM Do");
+      // Make variable to display desiredmoment.js data in desired element
+      currentDay.text(currentDate);
+
+      let container = $(".container");
+
+      // Make function to create grid in ''.container'
+      function createTimeBlocks() {
+        // Console log start of function
+        console.log("start of 'createTimeBlocks' function");
+        // Make for loop to create rows and columns with bootstrap classes for main area
+        for (i = 1; i <= 24; i++) {
+          
+          // In for loop:
+          // Console log start of row
+          console.log("---------");  
+          console.log("start of 'row" + i + "'");
+          
+          // Create div with class ‘row’ and Id row[i]
+          let timeBlock = $("<div>").addClass("row");
+          timeBlock.attr("id", "row" + i);
+          // Check to see timeBlocks are created
+          console.log(timeBlock);
+
+          // Create three columns of class col-md-2, col-md-8, col-md-2, and
+          //desired id's (hour, text, save)
+          let colHour = $("<div>").addClass("col-sm-2");
+          colHour.attr("id", "hour" + i);
+          console.log(colHour);
+          
+          let colText = $("<div>").addClass("col-sm-8");
+          colText.attr("id", "text" + i);
+          console.log(colText);
+          
+          let colSave= $("<div>").addClass("col-sm-2");
+          colSave.attr("id", "save"+ i);
+          console.log(colSave);
+          
+          // For colHour, append a p element with ”[i] + 'AM'”
+          // Creating elements
+          hourStamp = $("<p>").addClass("hour-stamp");
+          hourStamp.attr("id", "hourStamp"+ i);
+          let am = " AM";
+          let pm = " PM";
+          
+          // Conditional statements that govern whether am or pm is displayed in the hourStamp
+          if (i === 24) {
+            $(hourStamp).text((i - 12) + am);
+          }
+          else if (i === 12) {
+            $(hourStamp).text(i + pm);
+          }
+          else if (i > 12) {
+            $(hourStamp).text((i - 12) + pm);
+          }
+          else {
+            $(hourStamp).text(i + am);
+          }
+          // For colHour, append hourStamp
+          $(colHour).append(hourStamp);
+          console.log(hourStamp);
+
+          // Use a variable to create a textarea
+          textStamp = $("<textarea>");
+          textStamp.attr("id", "textArea"+ i);
+          // Setting textStamp to max width of column
+          textStamp.css("width", "100%");
+          // For colText, append a textarea
+          $(colText).append(textStamp);
+          console.log(textStamp);
+
+          // For colSave, append a button with an appended p element with "Save"
+          let saveButton = $("<button>").addClass("saveButton");
+          saveButton.attr("id", "saveButton"+ i);
+          console.log(saveButton);
+          
+          let saveStamp = $("<p>").addClass("saveStamp");
+          saveStamp.attr("id", "saveStamp"+ i);
+          saveStamp.text("Save");
+          console.log(saveStamp);
+
+          $(saveButton).append(saveStamp);
+          $(colSave).append(saveButton);
+          
+
+          // Append columns to timeBlock rows
+          $(timeBlock).append(colHour, colText, colSave);
+          // Append timeBlock to .container
+          $(container).append(timeBlock);
+
+          // Setting variable 'hourStampNumb' to be an integer that is equal to the number
+          //in the id of the current row's hourStamp
+          hourStampNumb = parseInt($(hourStamp).attr('id').replace(/hourStamp/, ''));
+          console.log("current row parsed as integer: ");
+          console.log(hourStampNumb);
+
+          // Set variable equal to each textStamp id #
+          inputNumb = parseInt($(textStamp).attr('id').replace(/textArea/, ''));
+          console.log(inputNumb);
+          userInput = $("#textArea"+ i).val();
+          console.log("User Input is " + userInput);
+          
+          // Check current time and set row textarea bg colors dynamically
+          //based on future, current hour, and past
+          function setRowColors() {
+            // Console log start of function
+            console.log("---");  
+            console.log("start of 'setRowColors' function");
+
+            let currentTime = moment().format();
+            let nextHour = currentTime.substr(currentTime.length - 5); 
+            console.log("next hour is " + nextHour);
+            console.log("next hour parsed as integer: ");
+            console.log(parseInt(nextHour));
+            
+            if (parseInt(nextHour) > hourStampNumb) {
+              $(textStamp).css("background-color","blue");
+            }
+            else if (parseInt(nextHour) == hourStampNumb) {
+              $(textStamp).css("background-color","green");
+            }
+            else {
+              $(textStamp).css("background-color","gray");
+            }    
+            // Console log end of function
+            console.log("end of 'setRowColors' function");  
+           
+          };
+          // *Don’t forget to Call functions*  
+          setRowColors();
+
+          // Console log end of row
+          console.log("end of 'row" + i + "'");
+          };
+
+           // Console log end of loop
+          console.log("end of loop");
+
+          // Make function to store textarea input on click for rows when blue button is clicked
+        $(".saveButton").on("click", function (event) {
+            //prevent initial submission
+            event.preventDefault();
+            // Console log start of 'storeText' function
+            console.log("start of storeText function");
+ 
+            // Locally Store input that is in current row's textarea
+            localStorage.setItem("entry", userInput);
+            console.log("storing entry...");
+            console.log("User Input is " + userInput);
+            alert(localStorage.getItem("entry") + " has been stored");
+
+            // Console log end of 'storeText' function
+            console.log("end of storeText function");
+        });
         
-        <!--1) the first row of the page contains a button that takes the user to the Highscores page in the 
-            left column, empty space in the middle column, and a countdown timer in the right column -->
-        <div class = "row" id = "rw1">
-            <!-- upper left column containing button that takes user to HighScores -->
-            <div class = "col-md-3 text-center viewHS-container" id = "top-left">
-                <button type = "button" class = "btn btn-lg" id = "highScore-btn">HighScores</button>
-            </div>
-            <!-- empty space column -->
-            <div class = "col-md-6 empty">
-            </div>
-            <!-- upper right column containing countdown timer -->
-            <div class = "col-md-3 text-center timeLeft-container" id = "top-right">
-                <p id = "countdown">Time: </p>
-            </div>
-        </div>
+        
 
-        <!--2) the second row of the page contains an h1 element in the middle column for the following:
-            (headers, questions, allDone, and yourHighScore. The side columns contain empty space -->
-        <div class = "row" id = "rw2">
-            <!-- empty space column -->
-            <div class = "col-md-3 empty">
-            </div>
-            <!-- upper central column initially containing title -->
-            <div class = "col-md-6 text-center" id = "central-top">
-                <h1 id = "title">Code Quiz</h1>
-            </div>
-            <!-- empty space column -->
-            <div class = "col-md-3 empty">
-            </div>
-        </div>
+        // Console log end of function
+        console.log("end of 'createTimeBlocks' function");
+        console.log("---------");
+      };
+      
 
-        <!--3) the third row of the page contains the following elements in the middle column: a textarea for
-            the game description and yourHighScore, an unordered list with four list items for questions, an
-            unordered list with three list items for HighScores. The side columns contain empty space -->
-        <div class = "row" id = "rw3">
-            <!-- empty space column -->
-            <div class = "col-md-3 empty">
-            </div>
-            <!-- upper-mid central column initially containing the quiz description  -->
-            <div class = "col-md-6 text-center" id = "central-upper">
-                <p id = "description-text">Click the Start button to begin a ten-question code quiz!  Read each question
-                    carefully, and choose one of the answers provided. When the quiz is finished, your score will be
-                    displayed, and you will have an opportunity to enter your initials.  You will then be taken to
-                    High Scores, where you can compare your high score among the top three scores.
-                </p>
-            </div>
-            <!-- empty space column -->
-            <div class = "col-md-3 empty">
-            </div>
-        </div>
-
-        <!--4) the fourth row of the page contains the following elements in the middle column: a start button, a form 
-            for the user to input their initials, and two buttons for 'Go Back' and 'Clear HighScores'. The side columns
-            contain empty space -->
-        <div class = "row" id = "rw4">
-            <!-- empty space column -->
-            <div class = "col-md-3 empty">
-            </div>
-            <!-- lower-mid central column initially containing button to start quiz -->
-            <div class = "col-md-6 text-center" id = "central-lower">
-                <button type = "button" class = "btn btn-lg" id = "startQuiz-btn" name = "start-button">Start Quiz</button>
-            </div>
-            <!-- empty space column -->
-            <div class = "col-md-3 empty">
-            </div>
-        </div>
-
-        <!--5) the fifth row of the page contains the following elements in the middle column: a textarea for correct/incorrect
-            callouts, and a submit button for submitting the initials input form. The side columns contain empty space -->
-        <div class = "row" id = "rw5">
-            <!-- empty space column -->
-            <div class = "col-md-3 empty">
-            </div>
-            <!-- bottom-mid central column initially empty -->
-            <div class = "col-md-6 text-center" id = "central-bottom">
-            </div>
-            <!-- empty space column -->
-            <div class = "col-md-3 empty">
-            </div>
-        </div>
-    </main>
-    
+      
 
 
-    
-</body>
+
+      // Make and call function to retrieve stored data on document ready
+
+
+      // *Don’t forget to Call functions*      
+      createTimeBlocks();
+
+
+      });
+    </script>
+  </body>
 </html>
