@@ -1,0 +1,59 @@
+/* Header bar and title will be dark gray with off-white text */
+.pageTitle {
+   background-color: rgb(97, 97, 97);
+   color: whitesmoke; 
+   text-align: center;
+}
+
+
+/*  bg color will be gray to help separate elements */
+.container-fluid {
+    background-color: gray; 
+}
+
+
+/* styles for the left column */
+.leftSide {
+    background-color: cadetblue;
+    height: 600px;
+}
+
+/* search area styles */
+.searchTitle {
+    text-align: left;
+}
+
+/* recent searches table styles */
+.listArea {
+    background-color: gray;
+    height: 400px;
+}
+td {
+    background-color: whitesmoke;
+}
+
+
+/* styles for the right column */
+.rightSide {
+    background-color: cadetblue;
+    height: 600px;
+}
+/* Current forecast styles */
+.weatherArea {
+    height: 300px;
+    background-color: rgb(187, 185, 185);
+}
+
+/* Upcoming forecast styles */
+.forecastTitle {
+    background-color: gray;
+    height: 30px;
+}
+.cardArea {
+    justify-content: center;
+    margin-top: 10px;
+}
+.card {
+    height: 120px;
+}
+

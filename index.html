@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <!-- Row 1 - Header -->
+    <header class="topBar">
+      <row>
+        <h1 class="pageTitle">Weather Dashboard</h1>
+      </row>
+    </header>
+    
+    <div class = "container-fluid">
+        <!-- Row 2 - Body -->
+        <div class = "row">
+            <!-- Row 2, Column 1 - left side -->
+            <div class = "col-sm-3">
+                <!-- Row 2, Column 1, Row a - City Search -->
+                <div class = "row">
+                    <div class = "col-sm-12">
+                        <div class = "row searchTitle">
+                            <div class = "col-sm-12">
+                                <h2 class = "lead">Search for a City:</h2>
+                            </div>
+                        </div>
+                        <div class = "row searchArea">
+                            <div class = "col-sm-9">
+                                <input type = "text" class = "searchCity" placeholder = "Choose a city...">
+                            </div>
+                            <div class = "col-sm-3">
+                                <button type = "submit" class = "searchButton">
+                                        <i class = "fa fa-search"></i>
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row 2, Column 1, Row b - City List -->
+                <div class = "row">
+                    <div class = "col-sm-11 listArea">
+                            <table class="cityList">
+                                <tr>
+                                <th>Recent Searches</th>
+                            </table>
+                    </div>
+                    <div class = "col-sm-1">
+                    </div>
+                </div>
+            </div>
+            <!-- Row 2, Column 2 - right side -->
+            <div class = "col-sm-9 rightSide">    
+                <!-- Row 2, Column 2, Row a - Current Weather -->
+                <div class = "row">
+                    <div class = "col-sm-12">
+                        <div class = "weatherArea">
+                            <p>weather area</p>
+                        </div>       
+                    </div>     
+                </div>
+                <!-- Row 2, Column 2, Row b - 5-day Forecast Title -->
+                <div class = "row">
+                    <div class = "col-sm-12">
+                        <div class = "forecastTitle">
+                            <h2 class = "lead">5-Day Forecast:</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row 2, Column 2, Row c - 5-day Forecast Cards -->
+                <div class = "row">
+                    <div class = "col-sm-12">
+                        <div class = "row cardArea">
+                            <div class = "col-sm-2.2">
+                                <div class = "card forecast-01">
+                                    <div class = "card-body bg-info">forecast</div>
+                                </div>
+                            </div>
+                            <div class = "col-sm-0.25"></div>
+                            <div class = "col-sm-2.2">
+                                <div class = "card forecast-02">
+                                    <div class = "card-body bg-info">forecast</div>
+                                </div>
+                            </div>
+                            <div class = "col-sm-0.25"></div>
+                            <div class = "col-sm-2.2">
+                                <div class = "card forecast-03">
+                                    <div class = "card-body bg-info" id = "cardBody">forecast</div>
+                                </div>
+                            </div>
+                            <div class = "col-sm-0.25"></div>
+                            <div class = "col-sm-2.2">
+                                <div class = "card forecast-04">
+                                    <div class = "card-body bg-info">forecast</div>
+                                </div>
+                            </div>
+                            <div class = "col-sm-0.25"></div>
+                            <div class = "col-sm-2.2">
+                                <div class = "card forecast-05">
+                                    <div class = "card-body bg-info">forecast</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                 
+                </div> 
+            </div>   
+        </div>
+    </div>
+
+    <!-- Links to js libraries and external logic sheet -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/logic.js"></script>
+</body>
+</html>
