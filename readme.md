@@ -42,3 +42,4 @@ Progress:
 
 2020.02.08.2354 - For logic.js, I have updated my pseudocoding, and have built the showHistory function to run after the page loads.  This function will show the recent searches the user has made using local storage.  Current issues:  I broke something with my javascript regarding the ajax call and the local storage, and am unable to fix it yet.  I will continue tinkering with the homework to see what I did wrong.
 
+2020.02.09.1533 - After seeking help on Stack Overflow regarding my code, specifically my ajax call, I updated logic.js and fixed the ajax call and the functions in my 'if !=' statement.  The forecast section and the recent searches list now work corectly.
