@@ -3,123 +3,142 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>Weather Dashboard</title>
-</head>
-
-<body>
-    <!-- Row 1 - Header -->
-    <header class="topBar">
-      <row>
-        <h1 class="pageTitle">Weather Dashboard</h1>
-      </row>
-    </header>
+    <!-- Meta tag from Bootstrap CSS that allows for proper rendering and touch-zooming responsive viewport function. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Link to the Latest compiled and minified BootStrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Link to the external styles sheet -->
+    <link rel="stylesheet" type="text/css" href="./assets/styles/style.css">
     
-    <div class = "container-fluid">
-        <!-- Row 2 - Body -->
-        <div class = "row">
-            <!-- Row 2, Column 1 - left side -->
-            <div class = "col-sm-3">
-                <!-- Row 2, Column 1, Row a - City Search -->
-                <div class = "row">
-                    <div class = "col-sm-12">
-                        <div class = "row searchTitle">
-                            <div class = "col-sm-12">
-                                <h2 class = "lead">Search for a City:</h2>
-                            </div>
-                        </div>
-                        <div class = "row searchArea">
-                            <div class = "col-sm-9">
-                                <input type = "text" class = "searchCity" placeholder = "Choose a city...">
-                            </div>
-                            <div class = "col-sm-3">
-                                <button type = "submit" class = "searchButton">
-                                        <i class = "fa fa-search"></i>
-                                    </button>
-                            </div>
-                        </div>
+    <title>About Me</title>
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <!-- This header is identical for each page. -->
+    <div class="navbar navbar-expand-sm fixed-top">
+        <nav class="container">
+            <row class="row">
+                <div class="col-md-1">&nbsp;</div>
+                <div class="col-md-3">
+                    <div class="navbar-header">
+                        <h1>Matthew Bell</h1>
                     </div>
                 </div>
-                <!-- Row 2, Column 1, Row b - City List -->
-                <div class = "row">
-                    <div class = "col-sm-11 listArea">
-                            <table class="cityList">
-                                <tr>
-                                <th>Recent Searches</th>
-                            </table>
-                    </div>
-                    <div class = "col-sm-1">
+                <div class="col-md-3">&nbsp;</div>
+                <div class="col-md-4 collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item active"><a role="presentation" class="nav-link active" href="./index.html">Main</a></li>
+                        <li class="nav-item"><a role="presentation" class="nav-link" href="./assets/pages/contact.html">Contact</a></li>
+                        <li class="nav-item"><a role="presentation" class="nav-link" href="./assets/pages/portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a role="presentation" class="nav-link" href="./assets/pages/mattbell_resume.pdf">Resume</a></li>
+                    </ul>  
+                </div>
+                <div class="col-md-1">&nbsp;</div>
+            </row>
+        </nav>
+    </div>
+    <!-- END HEADER SECTION -->
+
+    <!-- PAGE CONTAINER -->
+    <div class="container bg">
+        <!-- Background containing background from Toptal Subtle Patterns; fills the space from the Header to the Footer.  -->
+        <!-- This Background is identical for each page. -->
+        <main role="main" class="flex-shrink-0">
+            <!-- Top Blank Space -->
+            <row class="row">
+                <div class="col-md">&nbsp;</div>
+            </row>
+            <!-- Foreground section that contains page title, and main content for the page. -->
+            <row class="row">
+                <div class="col-md-2">&nbsp;</div>
+                <div class="col-md-8">
+                    <div class="panel">
+                        <row class="row">
+                            <div class="col-md">
+                                <h2 class="panel-heading text-center">About Me</h2>
+                                <hr>
+                            </div>
+                        </row>
+                        <row class="row">
+                            
+                            <div class="col-md-4">
+                                <img class="media" id="myPic" src="./assets/images/mbell-portrait.png" alt="Matthew Bell" height="350" width="350">
+                            </div> 
+                            <div class="col-md-1">&nbsp;</div>
+                            <div class="col-md-7">
+                                <row class="row">
+                                    <div class="col-md">
+                                        <p class="text-left mainText">
+                                            I am a College Student attending UCSD Extension Coding Bootcamp with a Bachelor’s Degree
+                                            focused in Bachelors of Science , Media Arts (3D Animation) from Platt College-San Diego. I am
+                                            currently seeking part time employment while attending college.
+                                            <br><br>I have professional experience as a Quality Assurance Specialist as well as a VFX Compositor
+                                            with a demonstrated history of working in both the computer games industry and the film industry.
+                                            My bag of skills includes, but is not limited to; 3D Charater Animation, VFX Compositing, Databases,
+                                            Data Collection, and both Quality Control/Assurance.
+                                            Top among my goals is to work in a team environment, where collaboration allows for the creation of
+                                            solutions to new and difficult problems, and where the combined value of the product is increased
+                                            beyond the sum of its parts.
+                                        </p>
+                                    </div>
+                                </row>
+                                <row class="row">
+                                    <!-- <div class="col-md-1">&nbsp;</div> -->
+                                    <div class="col-md-4">
+                                        <a href="https://github.com/Mbell42" target="_blank">
+                                            <p class="text-center linkText">
+                                                GitHub Profile
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <!-- <div class="col-md-1">&nbsp;</div> -->
+                                    <div class="col-md-4">
+                                        <a href="https://www.linkedin.com/in/matthew-bell-developer-artist/" target="_blank">
+                                            <p class="text-center linkText">
+                                                LinkedIn Profile
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <!-- <div class="col-md-1">&nbsp;</div> -->
+                                    <div class="col-md-4">
+                                        <a href="https://vimeo.com/matthewgbell" target="_blank">
+                                            <p class="text-center linkText">
+                                                Vimeo Reel
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <!-- <div class="col-md-1">&nbsp;</div> -->
+                                </row>
+                            </div>
+                        </row>
                     </div>
                 </div>
-            </div>
-            <!-- Row 2, Column 2 - right side -->
-            <div class = "col-sm-9 rightSide">    
-                <!-- Row 2, Column 2, Row a - Current Weather -->
-                <div class = "row">
-                    <div class = "col-sm-12">
-                        <div class = "weatherArea">
-                            <p>weather area</p>
-                        </div>       
-                    </div>     
-                </div>
-                <!-- Row 2, Column 2, Row b - 5-day Forecast Title -->
-                <div class = "row">
-                    <div class = "col-sm-12">
-                        <div class = "forecastTitle">
-                            <h2 class = "lead">5-Day Forecast:</h2>
-                        </div>
-                    </div>
-                </div>
-                <!-- Row 2, Column 2, Row c - 5-day Forecast Cards -->
-                <div class = "row">
-                    <div class = "col-sm-12">
-                        <div class = "row cardArea">
-                            <div class = "col-sm-2.2">
-                                <div class = "card forecast-01">
-                                    <div class = "card-body bg-info">forecast</div>
-                                </div>
-                            </div>
-                            <div class = "col-sm-0.25"></div>
-                            <div class = "col-sm-2.2">
-                                <div class = "card forecast-02">
-                                    <div class = "card-body bg-info">forecast</div>
-                                </div>
-                            </div>
-                            <div class = "col-sm-0.25"></div>
-                            <div class = "col-sm-2.2">
-                                <div class = "card forecast-03">
-                                    <div class = "card-body bg-info" id = "cardBody">forecast</div>
-                                </div>
-                            </div>
-                            <div class = "col-sm-0.25"></div>
-                            <div class = "col-sm-2.2">
-                                <div class = "card forecast-04">
-                                    <div class = "card-body bg-info">forecast</div>
-                                </div>
-                            </div>
-                            <div class = "col-sm-0.25"></div>
-                            <div class = "col-sm-2.2">
-                                <div class = "card forecast-05">
-                                    <div class = "card-body bg-info">forecast</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                 
-                </div> 
-            </div>   
-        </div>
+                <div class="col-md-2">&nbsp;</div>
+            </row>
+            <row class="row">
+                <div class="col-md">&nbsp;</div>
+            </row>
+        </main>
+    <!-- END PAGE CONTAINER -->
     </div>
 
-    <!-- Links to js libraries and external logic sheet -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./assets/logic.js"></script>
+        <!-- FOOTER SECTION-->
+        <!-- This footer is identical for each page. -->
+        <footer class="py-5 footer">
+            <div class="container conFoot">
+                <row class="row">
+                    <div class="col-md">
+                        <p class="text-center">
+                            <span class="footerText">matthewbell1030@gmail.com<br>phone: 858-922-5440<br>Copyright ©</span>
+                        </p>   
+                    </div>
+                </row>
+            </div>
+        <!-- END FOOTER SECTION-->
+        </footer>
+
 </body>
+
 </html>
