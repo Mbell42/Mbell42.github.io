@@ -1,6 +1,7 @@
 /* UNIVERSAL STYLES */    
     body {
-            background-color: rgb(73, 73, 73);
+        background-image: url("../images/mochaGrunge.png");
+        /* background-color: rgb(73, 73, 73); */
     }
 
     .navbar {
@@ -45,7 +46,8 @@
 
     /* main styles */
         .panel {
-            background-color: rgb(73, 73, 73);
+            background-image: url("../images/mochaGrunge.png");
+            /* background-color: rgb(73, 73, 73); */
             margin-top: 20px;
             padding-bottom: 20px;
         }
@@ -78,7 +80,8 @@
 
     /* footer styles */
         .footer {
-            background-color: rgb(73, 73, 73);
+            background-image: url("../images/mochaGrunge.png");
+            /* background-color: rgb(73, 73, 73); */
         }
 
         .footerText {
@@ -124,6 +127,9 @@
         .card-title {
             margin-bottom: 10px;
         }
+
+        /* gray backgrounds use a background image from 'https://www.toptal.com/designers/subtlepatterns/mocha-grunge/'. */
+        /* blue backgrounds use a background image from 'https://www.toptal.com/designers/subtlepatterns/vintage-wallpaper-pattern/'. */
     
 
 
