@@ -37,3 +37,5 @@ Progress:
 2020.02.22.2316 - For '.html' pages, I added a nav link targeting my resume.
 
 2020.02.22.2316 - For 'style.css' pages, I updated gray backgrounds to use a background image from 'https://www.toptal.com/designers/subtlepatterns/mocha-grunge/'.  I also updated my profile picture on 'index.html', my LinkedIn profile, and my GitHub profile.
+
+2020.02.22.2316 - For 'style.css' pages, I updated the header to include 'sm' sizes for columns, alleviating some of the issues experienced on smaller browser windows.
