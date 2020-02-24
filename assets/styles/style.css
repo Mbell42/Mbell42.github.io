@@ -128,6 +128,48 @@
             margin-bottom: 10px;
         }
 
+/* @MEDIA QUERIES */
+@media screen and (min-width: 1250px) {
+    .mainText {
+        width: 345px;
+    }   
+    .linkText {
+        width: 345px;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    body {
+      padding: 0px;
+    }
+    h1 {
+        text-align: center;
+    }
+    .container {
+        padding: 0px;
+      }
+    .panel {
+        padding: 0px;
+    }
+    .formButton {
+        justify-content: center;
+    } 
+    .mainText {
+        width: 345px;
+    }   
+    .linkText {
+        width: 345px;
+    }   
+  }
+
+  @media screen and (max-width: 365px) {
+    h1 {
+        padding: 0px;
+        text-align: left;
+    }
+  }
+
+
         /* gray backgrounds use a background image from 'https://www.toptal.com/designers/subtlepatterns/mocha-grunge/'. */
         /* blue backgrounds use a background image from 'https://www.toptal.com/designers/subtlepatterns/vintage-wallpaper-pattern/'. */
     
