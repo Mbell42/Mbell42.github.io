@@ -41,3 +41,5 @@ Progress:
 2020.02.22.2316 - For 'style.css' pages, I updated the header to include 'sm' sizes for columns, alleviating some of the issues experienced on smaller browser windows.
 
 2020.02.24.0220 - This push contains element position fixes for mobile screens and large screens.  For 'style.css' pages, I added '@media' queries for three different sizes, and added several sizing, position, and padding styles.  For '.html' pages, I added sm and lg sizes to columns, and updated column sizes based on screen size.
+
+2020.02.24.0228 - For '.html' pages, I updated the resume link for the github pages version of the site only.
