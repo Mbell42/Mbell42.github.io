@@ -1,0 +1,177 @@
+/* UNIVERSAL STYLES */    
+    body {
+        background-image: url("../images/mochaGrunge.png");
+        /* background-color: rgb(73, 73, 73); */
+    }
+
+    .navbar {
+        height: 90px;
+    }
+
+    /* Header styles */
+        .navbar-header {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top:none;
+            width: 390px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            
+            color: wheat;
+        }
+
+        h1 {
+            font-size: 56px;
+        }
+
+        .nav-pills {
+            margin-top: 40px;
+            margin-bottom: none;
+        }
+
+        .nav-link {
+            font-family: Arial, Helvetica, sans-serif;
+            color: wheat;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+
+    /* bg styles */
+        .bg {
+            width: fit-content;
+            height: fit-content;
+            min-height: calc(100vh - 230px); 
+            background-image: url("../images/vintage-wallpaper.png");
+        }
+
+    /* main styles */
+        .panel {
+            background-image: url("../images/mochaGrunge.png");
+            /* background-color: rgb(73, 73, 73); */
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+        .panel-heading {
+            margin: auto;
+        }
+
+        h2 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: wheat;
+            font-size: 44px;
+        }
+
+        .mainText {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+            background-color: rgba(245, 245, 245, 0.753);
+            padding: 8px;
+            border-style: outset;
+        }
+
+        .linkText {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+            background-color: rgba(245, 245, 245, 0.753);
+            padding: 8px;
+            border-style: ridge;
+        }
+
+
+    /* footer styles */
+        .footer {
+            background-image: url("../images/mochaGrunge.png");
+            /* background-color: rgb(73, 73, 73); */
+        }
+
+        .footerText {
+            color: rgb(201, 199, 198);
+        }
+
+
+
+/* PAGE-SPECIFIC STYLES */
+    /* Contact page form styles */
+    
+        #formMessage {
+            height: 200px;
+        }
+
+        .contactText {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+            background-color: rgba(245, 245, 245, 0.753);
+            padding: 8px;
+            border-style: ridge;
+        }
+
+    /* Portfolio page card styles */
+        .cardLeft {
+            margin-right: 30px;
+        }
+
+        .cardMid {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .cardRight {
+            margin-left: 30px;
+        }
+
+        .card-img-top {
+            margin-bottom: 5px;
+            width: 345px;
+        }
+
+        .card-title {
+            margin-bottom: 10px;
+        }
+
+/* @MEDIA QUERIES */
+@media screen and (min-width: 1250px) {
+    .mainText {
+        width: 345px;
+    }   
+    .linkText {
+        width: 345px;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    body {
+      padding: 0px;
+    }
+    h1 {
+        text-align: center;
+    }
+    .container {
+        padding: 0px;
+      }
+    .panel {
+        padding: 0px;
+    }
+    .formButton {
+        justify-content: center;
+    } 
+    .mainText {
+        width: 345px;
+    }   
+    .linkText {
+        width: 345px;
+    }   
+  }
+
+  @media screen and (max-width: 365px) {
+    h1 {
+        padding: 0px;
+        text-align: left;
+    }
+  }
+
+
+        /* gray backgrounds use a background image from 'https://www.toptal.com/designers/subtlepatterns/mocha-grunge/'. */
+        /* blue backgrounds use a background image from 'https://www.toptal.com/designers/subtlepatterns/vintage-wallpaper-pattern/'. */
+    
+
+
